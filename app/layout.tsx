@@ -29,19 +29,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-       
         <style>
           @import
-          url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+          url(&apos;https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap&apos;);
         </style>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-darkbg quantico text-lightbg cursor min-h-[100vh] flex flex-col`}
       >
         <Navbar />
-        <div>
-          {children}
-        </div>
+        <div>{children}</div>
         <Toaster />
         <Footer />
       </body>
