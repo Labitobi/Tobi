@@ -1,10 +1,11 @@
-import { Facebook, Github, Linkedin } from "lucide-react";
+import { Download, Facebook, Github, Linkedin } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Typed from "typed.js";
 import { AnimatedCounter } from "@/components/Counter";
+import { Button } from "./ui/button";
 
 const Mainsection = () => {
   useEffect(() => {
@@ -24,6 +25,16 @@ const Mainsection = () => {
       typed.destroy();
     };
   }, []);
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/cv.pdf"; // Replace with the actual file URL
+    link.download = "Tobi's CV.pdf"; // Name of the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div>
       <div className="w-[50%] mx-auto flex items-center justify-center shadow-2xl shadow-brand  h-5"></div>
@@ -49,7 +60,13 @@ const Mainsection = () => {
             I am a front-end web developer, UI/UX Designer. Committed to
             continuous learning and collaboration in the tech community.
           </p>
-          <div className="flex ml-auto mr-0 justify-end items-center p-1 w-full space-x-3">
+
+          <div className="flex ml-auto mr-0 justify-end items-center p-1 w-full space-x-2 md:space-x-3">
+            <div className="ml-0 mr-auto cursor cursor">
+              <Button onClick={handleDownload} className="hover-cursor bg-darkbg shadow-md shadow-brand hover:shadow-lg">
+                <span className="hidden md:flex">Download</span> CV <Download size={5}/>
+              </Button>
+            </div>
             <Link
               href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61563366152049"
               className="p-2 shadow-inner text-facebook shadow-facebook rounded-xl hover:animate-bounce hover-cursor"
