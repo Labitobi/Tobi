@@ -63,8 +63,12 @@ const Mainsection = () => {
 
           <div className="flex ml-auto mr-0 justify-end items-center p-1 w-full space-x-2 md:space-x-3">
             <div className="ml-0 mr-auto cursor cursor">
-              <Button onClick={handleDownload} className="hover-cursor bg-darkbg shadow-md shadow-brand hover:shadow-lg">
-                <span className="hidden md:flex">Download</span> CV <Download size={5}/>
+              <Button
+                onClick={handleDownload}
+                className="hover-cursor bg-darkbg shadow-md shadow-brand hover:shadow-lg"
+              >
+                <span className="hidden md:flex">Download</span> CV{" "}
+                <Download size={5} />
               </Button>
             </div>
             <Link
@@ -95,22 +99,22 @@ const Mainsection = () => {
         </div>
       </div>
       <div className="mx-auto mt-20 flex items-center justify-center w-full space-x-5 p-5 flex-col md:flex-row lg:w-[60%] lg:text-right bg-transparent">
-        <div className="border-b-brand border-b-[1px] md:border-r-[2px] md:border-r-brand md:border-b-0 p-3  text-xl w-full ml-5">
-          <p>Projects</p>
-          <p className="text-brand text-right text-5xl">
-            <AnimatedCounter endValue={3} />
-          </p>
-        </div>
-        <div className="p-3  text-xl w-full">
-          <p>Services</p>
+        <div className="border-b-brand border-b-[1px] md:border-r-[2px] md:border-r-brand md:border-b-0 p-3 text-xl w-full ml-5">
+          <p>Years of Experience</p>
           <p className="text-brand text-right text-5xl">
             <AnimatedCounter endValue={2} />
           </p>
         </div>
-        <div className="border-t-brand border-t-[1px] md:border-l-[2px] md:border-l-brand md:border-t-0 p-3  text-xl w-full ">
-          <p>Age in Years</p>
+        <div className="p-3 text-xl w-full">
+          <p>Completed Projects</p>
           <p className="text-brand text-right text-5xl">
-            <AnimatedCounter endValue={17} />
+            <AnimatedCounter endValue={5} />
+          </p>
+        </div>
+        <div className="border-t-brand border-t-[1px] md:border-l-[2px] md:border-l-brand md:border-t-0 p-3 text-xl w-full">
+          <p>Tech Stacks Mastered</p>
+          <p className="text-brand text-right text-5xl">
+            <AnimatedCounter endValue={6} />
           </p>
         </div>
       </div>
