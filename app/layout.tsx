@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,8 +31,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <style>
-          @import
-          url(&apos;https://fonts.googleapis.com/css2?fan devmily=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap&apos;);
+          @import url(&apos;https://fonts.googleapis.com/css2?fan
+          devmily=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap&apos;);
         </style>
       </head>
       <body
@@ -41,6 +42,7 @@ export default function RootLayout({
         <div>{children}</div>
         <Toaster />
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
